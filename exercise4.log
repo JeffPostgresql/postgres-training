@@ -1,818 +1,39 @@
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
+                   ?column?                    
+-----------------------------------------------
+ ====DROP and CREATE TABLE CUSTOMERS==========
+(1 row)
+
+psql:exercise4.sql:3: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
 DROP TABLE
 CREATE TABLE
+                    ?column?                    
+------------------------------------------------
+ =======DROP AND CREATE TABLE ACCOUNTS=========
+(1 row)
+
+psql:exercise4.sql:14: NOTICE:  drop cascades to constraint fk_account_id on table account_transactions
 DROP TABLE
 CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
+                      ?column?                       
+-----------------------------------------------------
+ =======DROP AND CREATE ACCOUNT_TRANSACTION=========
 (1 row)
 
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
 DROP TABLE
 CREATE TABLE
-DROP TABLE
-CREATE TABLE
+ALTER TABLE
+          ?column?           
+-----------------------------
+ =======INSERT DATA=========
+(1 row)
+
 INSERT 0 1
 INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
+          ?column?           
+-----------------------------
+ =======VERIFY DATA=========
 (1 row)
 
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:31: NOTICE:  function get_total_balance() does not exist, skipping
-DROP FUNCTION
-psql:exercise4.sql:43: ERROR:  syntax error at or near "OR"
-LINE 1: CREATE FUNCTION OR REPLACE get_total_balance (
-                        ^
-psql:exercise4.sql:45: ERROR:  function get_total_balance(integer) does not exist
-LINE 1: SELECT get_total_balance(1);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:31: NOTICE:  function get_total_balance() does not exist, skipping
-DROP FUNCTION
-psql:exercise4.sql:43: ERROR:  syntax error at or near "OR"
-LINE 1: CREATE FUNCTION OR REPLACE get_total_balance (
-                        ^
-psql:exercise4.sql:45: ERROR:  function get_total_balance(integer) does not exist
-LINE 1: SELECT get_total_balance(1);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:31: NOTICE:  function get_total_balance() does not exist, skipping
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:45: ERROR:  column "customers_id" does not exist
-LINE 1: ...M(balance)                    FROM accounts WHERE customers_...
-                                                             ^
-HINT:  Perhaps you meant to reference the column "accounts.customer_id".
-QUERY:  SELECT SUM(balance)                    FROM accounts WHERE customers_id = customer_id
-CONTEXT:  PL/pgSQL function get_total_balance(integer) line 5 at SQL statement
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:50: NOTICE:  function deposit() does not exist, skipping
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:71: ERROR:  relation "_amount" does not exist
-LINE 1: SELECT balance                      FROM _amount WHERE accou...
-                                                 ^
-QUERY:  SELECT balance                      FROM _amount WHERE accounts.id = _id
-CONTEXT:  PL/pgSQL function deposit(integer,numeric) line 7 at SQL statement
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:79: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  650.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-DROP FUNCTION
-psql:exercise4.sql:96: ERROR:  syntax error at or near "EXCEPT"
-LINE 14:  new_balance := current_balance EXCEPT _amount;
-                                         ^
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  650.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:79: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  650.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  650.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- withdraw 
-----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  350.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-DROP FUNCTION
-psql:exercise4.sql:100: ERROR:  "result" is not a known variable
-LINE 16:  result := FALSE;
-          ^
-psql:exercise4.sql:104: ERROR:  function withdraw(integer, numeric) does not exist
-LINE 2: SELECT withdraw(1, 150.00);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:79: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-psql:exercise4.sql:101: ERROR:  "result" is not a known variable
-LINE 16:  result := FALSE;
-          ^
-psql:exercise4.sql:105: ERROR:  function withdraw(integer, numeric) does not exist
-LINE 2: SELECT withdraw(1, 150.00);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:79: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-psql:exercise4.sql:101: ERROR:  "result" is not a known variable
-LINE 16:  result := FALSE;
-          ^
-psql:exercise4.sql:105: ERROR:  function withdraw(integer, numeric) does not exist
-LINE 2: SELECT withdraw(1, 150.00);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:79: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-psql:exercise4.sql:101: ERROR:  "result" is not a known variable
-LINE 16:  result := FALSE;
-          ^
-psql:exercise4.sql:105: ERROR:  function withdraw(integer, numeric) does not exist
-LINE 2: SELECT withdraw(1, 1500.00);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:79: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:105: NOTICE:  Account 1 has sinsufficient balance 500.00 for withdrawal of amount 1500.00
-psql:exercise4.sql:105: ERROR:  column "results" does not exist
-LINE 1: results
-        ^
-QUERY:  results
-CONTEXT:  PL/pgSQL function withdraw(integer,numeric) line 15 at RETURN
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:105: NOTICE:  Account 1 has sinsufficient balance 500.00 for withdrawal of amount 1500.00
- withdraw 
-----------
- f
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | customer_id 
-----+---------+-------------
-  1 |     0.0 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:105: NOTICE:  Account 1 has sinsufficient balance 500.00 for withdrawal of amount 1500.00
- withdraw 
-----------
- f
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  500.00 |           1
-(1 row)
-
- withdraw 
-----------
- t
-(1 row)
-
- id | balance | customer_id 
-----+---------+-------------
-  1 |  350.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
  id | first_name | last_name 
 ----+------------+-----------
   1 | JEFF       | SEGOVIA
@@ -823,70 +44,16 @@ INSERT 0 1
   1 |     0.0 |              500.00 |           1
 (1 row)
 
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |     0.0 |              500.00 |           1
+                     ?column?                      
+---------------------------------------------------
+ =======CREATE FUNCTION GET_TOTAL_BALANCE=========
 (1 row)
 
 DROP FUNCTION
 CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |  500.00 |              500.00 |           1
-(1 row)
-
-DROP FUNCTION
-psql:exercise4.sql:104: ERROR:  missing data type declaration at or near "="
-LINE 12:  _maintaining_balance = NUMERIC;
-                               ^
-psql:exercise4.sql:108: ERROR:  function withdraw(integer, numeric) does not exist
-LINE 2: SELECT withdraw(1, 1500.00);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |  500.00 |              500.00 |           1
-(1 row)
-
-psql:exercise4.sql:112: ERROR:  function withdraw(integer, numeric) does not exist
-LINE 1: SELECT withdraw(1, 150.00);
-               ^
-HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |  500.00 |              500.00 |           1
-(1 row)
-
-psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  password authentication failed for user "developer"
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |     0.0 |              500.00 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |     0.0 |              500.00 |           1
+                ?column?                
+----------------------------------------
+ =======CREATE FUNTION DEPOSIT=========
 (1 row)
 
 DROP FUNCTION
@@ -896,92 +63,62 @@ CREATE FUNCTION
  t
 (1 row)
 
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |  500.00 |              500.00 |           1
-(1 row)
-
-psql:exercise4.sql:80: NOTICE:  function withdraw() does not exist, skipping
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:108: NOTICE:  Account 1 is below maintaining balance 500.00 for the withdrawal of amount 1500.00
- withdraw 
-----------
- f
+           ?column?           
+------------------------------
+ =======DEPOSIT 1000=========
 (1 row)
 
  id | balance | maintaining_balance | customer_id 
 ----+---------+---------------------+-------------
-  1 |  500.00 |              500.00 |           1
+  1 | 1000.00 |              500.00 |           1
 (1 row)
 
-psql:exercise4.sql:112: NOTICE:  Account 1 is below maintaining balance 500.00 for the withdrawal of amount 150.00
- withdraw 
-----------
- f
-(1 row)
-
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |  500.00 |              500.00 |           1
-(1 row)
-
-psql:exercise4.sql:2: NOTICE:  drop cascades to constraint fk_customer_id on table accounts
-DROP TABLE
-CREATE TABLE
-DROP TABLE
-CREATE TABLE
-INSERT 0 1
-INSERT 0 1
- id | first_name | last_name 
-----+------------+-----------
-  1 | JEFF       | SEGOVIA
-(1 row)
-
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |     0.0 |              500.00 |           1
+                 ?column?                 
+------------------------------------------
+ =======CREATE FUNCTION WITHDRAW=========
 (1 row)
 
 DROP FUNCTION
 CREATE FUNCTION
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |     0.0 |              500.00 |           1
+                 ?column?                  
+-------------------------------------------
+ =======CREATE FUNTION P_WITHDRAW=========
 (1 row)
 
-DROP FUNCTION
-CREATE FUNCTION
- deposit 
----------
- t
-(1 row)
-
- id | balance | maintaining_balance | customer_id 
-----+---------+---------------------+-------------
-  1 |  800.00 |              500.00 |           1
-(1 row)
-
-DROP FUNCTION
-CREATE FUNCTION
-psql:exercise4.sql:108: NOTICE:  Account 1 is below maintaining balance 800.00 for the withdrawal of amount 1500.00
- withdraw 
-----------
- f
+DROP PROCEDURE
+CREATE PROCEDURE
+CALL
+            ?column?            
+--------------------------------
+ =======VERIFY ACCOUNT=========
 (1 row)
 
  id | balance | maintaining_balance | customer_id 
 ----+---------+---------------------+-------------
-  1 |  800.00 |              500.00 |           1
+  1 |  900.00 |              500.00 |           1
 (1 row)
 
- withdraw 
-----------
- t
+ id | amount | transaction_type | account_id | beginning_balance | ending_balance 
+----+--------+------------------+------------+-------------------+----------------
+  1 |  100.0 | W                |          1 |           1000.00 |         900.00
+(1 row)
+
+DROP PROCEDURE
+CREATE PROCEDURE
+CALL
+                    ?column?                    
+------------------------------------------------
+ =======VERIFY ACCOUNT AFTER P_DEPOSIT=========
 (1 row)
 
  id | balance | maintaining_balance | customer_id 
 ----+---------+---------------------+-------------
-  1 |  650.00 |              500.00 |           1
+  1 | 1400.00 |              500.00 |           1
 (1 row)
+
+ id | amount | transaction_type | account_id | beginning_balance | ending_balance 
+----+--------+------------------+------------+-------------------+----------------
+  1 |  100.0 | W                |          1 |           1000.00 |         900.00
+  2 |  500.0 | D                |          1 |            900.00 |        1400.00
+(2 rows)
 
